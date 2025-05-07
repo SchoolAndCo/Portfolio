@@ -1,10 +1,21 @@
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --primary-color: #e95420;
+  --primary-color-light: #ed764d;
+  --secondary-color: #ad79a8;
+  --outer-background-color: #333333;
+  --main-background-color: #e2e0dd;
+  --footer: #2d2d2d;
+}
+
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--outer-background-color);
+  color: var(--white);
 }
 
 header,
@@ -18,7 +29,7 @@ header {
   grid-template-columns: 135px 1fr;
   align-items: center;
   gap: 1rem;
-  background-color: #e95420;
+  background-color: var(--primary-color);
 }
 
 .header-title {
@@ -33,7 +44,7 @@ header {
 }
 
 .header-navigation-item {
-  background-color: #ed764d;
+  background-color: var(--primary-color-light);
   display: flex;
   align-items: center;
   height: 100%;
@@ -45,16 +56,16 @@ header {
 .header-navigation-item a,
 .header-navigation-item a:link,
 .header-navigation-item a:visited {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
 }
 
 main {
-  background-color: #e2e0dd;
+  background-color: var(--main-background-color);
   padding-inline: 2rem;
   padding-bottom: 3rem;
   width: 60%;
-  color: #111111;
+  color: var(--black);
 }
 
 .hobby-container {
@@ -64,7 +75,7 @@ main {
 }
 
 .hobby-card {
-  background-color: #ad79a8;
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -102,5 +113,5 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  background-color: #2d2d2d;
+  background-color: var(--footer);
 }
