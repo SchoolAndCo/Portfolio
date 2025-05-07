@@ -7,6 +7,15 @@
   --outer-background-color: #333333;
   --main-background-color: #e2e0dd;
   --footer: #2d2d2d;
+
+  --orange-50: #f29879;
+  --orange-40: #f6bba6;
+
+  --border-radius: 6px;
+
+  --link-primary: #e95420;
+  --link-hover: #af1e2d;
+  --link-visited: #5c1a55;
 }
 
 body {
@@ -114,4 +123,16 @@ footer {
   justify-content: center;
   gap: 4rem;
   background-color: var(--footer);
+}
+
+a {
+  color: var(--link-primary);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:visited {
+  color: var(--link-visited);
 }

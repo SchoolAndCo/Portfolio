@@ -1,0 +1,24 @@
+.info-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-card-title,
+.info-card-body {
+  padding: 0.4rem;
+}
+
+.info-card-title {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+
+  background: var(--orange-50);
+}
+
+.info-card-body {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+
+  background-color: var(--orange-40);
+}
