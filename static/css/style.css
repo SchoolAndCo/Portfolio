@@ -62,9 +62,9 @@ header {
   padding-inline: 1rem;
 }
 
-.header-navigation-item a,
-.header-navigation-item a:link,
-.header-navigation-item a:visited {
+.header-navigation-item,
+.header-navigation-item:link,
+.header-navigation-item:visited {
   color: var(--white);
   text-decoration: none;
 }
