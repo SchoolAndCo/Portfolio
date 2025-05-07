@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
-    <title>Hi</title>
+    {% block header %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
     <header>
@@ -16,18 +17,7 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Base Template</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nulla
-        ullam optio commodi? Nisi ratione non explicabo ipsum qui quibusdam
-        provident porro voluptates distinctio ut eius possimus sequi, dolores
-        alias. Beatae, quis fugit. Perspiciatis illum veniam enim aperiam
-        sapiente soluta nobis quod praesentium aliquid aspernatur rerum sed
-        asperiores accusantium, voluptatum rem repellendus provident
-        voluptatibus fugit ex necessitatibus suscipit? Quia, quisquam!
-      </p>
-    </main>
+    <main>{% block content %}{% endblock %}</main>
 
     <footer>
       <h4>Made by Dominik Krenn</h4>
