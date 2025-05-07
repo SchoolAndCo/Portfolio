@@ -1,0 +1,40 @@
+.seating-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.seating-container-teacher {
+  width: 43%;
+}
+
+.seating-container-teacher .seating-item {
+  margin-bottom: -20px;
+}
+
+.seating-container-students {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.seating-item {
+  background: rgb(61, 61, 61);
+  border: 1px solid black;
+  color: rgb(36, 36, 36);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3rem;
+  height: 3rem;
+  margin-block: 20px;
+}
+
+.teacher,
+.occupied {
+  background: grey;
+  color: rgb(0, 0, 0);
+}
+
+.floor {
+  border: none;
+  color: var(--main-background-color);
+  background: var(--main-background-color);
+}
