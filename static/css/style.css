@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+header,
+footer {
+  width: 100%;
+}
+
+header {
+  height: 3rem;
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  align-items: center;
+  gap: 1rem;
+  background-color: #e95420;
+}
+
+.header-title {
+  margin-block: 0;
+}
+
+.header-navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 100%;
+}
+
+.header-navigation-item {
+  background-color: #ed764d;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  padding-inline: 1rem;
+}
+
+.header-navigation-item a,
+.header-navigation-item a:link,
+.header-navigation-item a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+main {
+  background-color: #e2e0dd;
+  padding-inline: 2rem;
+  padding-bottom: 3rem;
+  width: 60%;
+  color: #111111;
+}
+
+.hobby-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hobby-card {
+  background-color: #ad79a8;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+.hobby-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: none;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.hobby-card-text {
+  padding-inline: 1rem;
+}
+
+.hobby-card .fit {
+  object-fit: contain;
+}
+
+.strengths {
+  color: green;
+  list-style-type: "✔ ";
+}
+
+.weaknesses {
+  color: red;
+  list-style-type: "✘ ";
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  background-color: #2d2d2d;
+}
