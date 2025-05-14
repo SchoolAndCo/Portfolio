@@ -8,6 +8,7 @@
 }
 
 body {
+  flex-direction: column;
   color: white;
   padding: .2rem;
 }
@@ -37,6 +38,7 @@ a:visited {
 }
 
 main {
+  justify-self: center;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -57,10 +59,13 @@ main {
 
 .page-card {
   background-color: var(--light-grey);
+  padding: 1rem;
+  font-size: small;
 }
 
 .page-content-container {
   background-color: var(--dark-grey);
+  padding-inline: 1rem;
 }
 
 .page-side-container {
