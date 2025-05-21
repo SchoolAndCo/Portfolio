@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./static/css/contact.css" />
-    <title>Hi</title>
+    <title>Contact</title>
   </head>
   <body>
     <header>
@@ -20,16 +20,73 @@
     </header>
 
     <main>
-      <h1>Base Template</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nulla
-        ullam optio commodi? Nisi ratione non explicabo ipsum qui quibusdam
-        provident porro voluptates distinctio ut eius possimus sequi, dolores
-        alias. Beatae, quis fugit. Perspiciatis illum veniam enim aperiam
-        sapiente soluta nobis quod praesentium aliquid aspernatur rerum sed
-        asperiores accusantium, voluptatum rem repellendus provident
-        voluptatibus fugit ex necessitatibus suscipit? Quia, quisquam!
-      </p>
+      <h1>Contact</h1>
+      <!-- get cause we no backend so we show in other page -->
+      <form action="/hello.html" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="birthday">Geburtsdatum:</label>
+        <input type="date" id="birthday" name="birthday"><br>
+        <label for="ticket-count">Anzahl der Tickets</label>
+        <input type="number" id="ticket-count" name="ticket-count" min="1" max="10" required><br>
+        <label for="rating">Zufriedenheit(1-10):</label>
+        <input type="range" id="rating" name="rating" min="1" max="10"><br>
+        <label for="gender">Geschlecht:</label>
+        <select name="gender" id="geender">
+          <option disabled selected value> -- select an option -- </option>
+          <option value="male">Männlich</option>
+          <option value="female">Weiblich</option>
+          <option value="trans-male">Trans Mann</option>
+          <option value="trans-female">Trans Frau</option>
+          <option value="nonbinary">Nicht-binär</option>
+          <option value="agender">Agender</option>
+          <option value="genderfluid">Genderfluid</option>
+          <option value="intersex">Intersex</option>
+          <option value="other">Andere</option>
+          <option value="prefernot">Bevorzuge keine Angabe</option>
+        </select><br>
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+        <label for="muffin-man">Do you know... THE MUFFIN MAN?</label>
+        <select name="muffin-man" id="muffin-man" required>
+          <option disabled selected value> -- select an option -- </option>
+          <option value="2">The Muffin Man?</option>
+          <option value="3">The Muffin Man!</option>
+          <option value="4">Yes, I know the Muffin Man.</option>
+          <option value="5">Who lives on Drury Lane?</option>
+          <option value="6">Well, she's married to the Muffin Man...</option>
+          <option value="7">The Muffin Man?!</option>
+          <option value="8">The Muffin Man!</option>
+        </select><br>
+        <label for="phone">Telefonnummer:</label>
+        <input type="text" id="phone-display" readonly><br>
+        <input 
+          type="range"
+          id="phone"
+          name="phone"
+          value="4399999999999"
+          min="4301000000000"
+          max="4399999999999"
+          step="1"
+        ><br>
+
+        <div class="button-container">
+          <input type="submit" value="Submit :3">
+          <input type="reset" value="Reset >:3">
+          <input type="button" value="Cancel :3" onclick="window.location.href='./index.html'">
+          <input type="button" value="Git tehehe" onclick="window.location.href='https://github.com/SchoolAndCo/Portfolio'">
+          <input type="button" value="to much buttons" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+          <input type="button" value="I button, therefore I am" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+          <input type="button" value="an i am... iron man" onclick="window.location.href='https://youtu.be/TWB31WFomz4?t=60'">
+          <input type="button" value="Feedback Mode 😎" onclick="alert('Your feedback has been noted by our invisible squirrel committee.')">
+          <input type="button" value='Form? Completed it, mate.' onclick="alert('Achievement unlocked: Bureaucratic Bravery 🏆')">
+        </div>
+
+      </form>
     </main>
 
     <footer>
@@ -39,5 +96,28 @@
         <a href="https://github.com/SchoolAndCo/Portfolio">Github</a>
       </p>
     </footer>
+
+    <script>
+      const PHONE_INPUT = document.getElementById("phone");
+      const PHONE_DISPLAY = document.getElementById("phone-display");
+      const EMPTY_STRING = "Enter your phone number by sliding the slider... :3";
+      const MAX_PHONE_LENGTH = PHONE_INPUT.max;
+
+      PHONE_DISPLAY.value = EMPTY_STRING; 
+
+
+      PHONE_INPUT.oninput = function() {
+        console.log(this.value);
+        console.log(MAX_PHONE_LENGTH);
+        if (this.value >= MAX_PHONE_LENGTH) {
+          PHONE_DISPLAY.value = EMPTY_STRING;
+          return;
+        }
+
+        PHONE_DISPLAY.value = this.value;
+        console.log(this.value);
+      };
+
+    </script>
   </body>
 </html>

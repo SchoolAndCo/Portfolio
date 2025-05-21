@@ -1,0 +1,96 @@
+:root {
+    --button-radius-contact: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form label:has(+ input:required)::after {
+    content: "*";
+    color: red;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+input {
+    padding: .4rem;
+}
+
+select {
+  appearance: none;
+  padding: 0.6em 6em 0.6em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+select::before,
+select::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 40%;
+}
+
+select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    border-width: 0;
+    color: var(--ubuntu-button-text, #fff);
+    background: var(--ubuntu-orange, #E95420);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.5s;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: var(--ubuntu-orange-dark, #c34113);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@media (max-width: 830px) {
+    .button-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 620px) {
+    .button-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+    <title>Hello</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">MySite :3</h1>
+      <nav class="header-navigation">
+        <a class="header-navigation-item" href="./index.html">Home</a>
+        <a class="header-navigation-item" href="./about-me.html">About me</a>
+        <a class="header-navigation-item" href="./sitzplan.html">Sitzplan</a>
+        <a class="header-navigation-item" href="./firma.html">Firma</a>
+        <a class="header-navigation-item" href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Submission Received! 📨</h1>
+      <div id="submission-data">
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Password:</strong> <span id="password"></span></p>
+        <p><strong>Birthday:</strong> <span id="birthday"></span></p>
+        <p><strong>Tickets:</strong> <span id="ticket-count"></span></p>
+        <p><strong>Zufriedenheit:</strong> <span id="rating"></span></p>
+        <p><strong>Geschlecht:</strong> <span id="gender"></span></p>
+        <p><strong>Nachricht:</strong> <span id="message"></span></p>
+        <p><strong>Muffin Man Answer:</strong> <span id="muffin-man"></span></p>
+        <p><strong>Telefonnummer:</strong> <span id="phone"></span></p>
+      </div>
+    </main>
+
+    <footer>
+      <h4>Made by Dominik Krenn</h4>
+      <p>
+        view the src code on
+        <a href="https://github.com/SchoolAndCo/Portfolio">Github</a>
+      </p>
+    </footer>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+
+      function fill(id, fallback = "—") {
+        const el = document.getElementById(id);
+        if (el) el.textContent = params.get(id) || fallback;
+      }
+
+      const fields = [
+        "name",
+        "email",
+        "password",
+        "birthday",
+        "ticket-count",
+        "rating",
+        "gender",
+        "message",
+        "muffin-man",
+        "phone"
+      ];
+
+      fields.forEach(field => fill(field));
+    </script>
+  </body>
+</html>
